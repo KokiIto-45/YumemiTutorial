@@ -41,10 +41,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Oib-VT-siG" firstAttribute="width" secondItem="U2T-4a-qt5" secondAttribute="width" multiplier="0.5" id="9LO-Dg-Rzd"/>
+                                    <constraint firstItem="7Q5-sS-jAc" firstAttribute="width" secondItem="rdD-FL-Pab" secondAttribute="width" multiplier="0.5" id="LFE-sN-P8Y"/>
                                     <constraint firstAttribute="trailing" secondItem="rdD-FL-Pab" secondAttribute="trailing" id="UbI-Jt-FDC"/>
                                     <constraint firstAttribute="trailing" secondItem="7Q5-sS-jAc" secondAttribute="trailing" id="ZNv-ZY-SBv"/>
-                                    <constraint firstItem="7Q5-sS-jAc" firstAttribute="width" secondItem="U2T-4a-qt5" secondAttribute="width" multiplier="0.5" id="bxV-nK-9e5"/>
+                                    <constraint firstItem="Oib-VT-siG" firstAttribute="width" secondItem="rdD-FL-Pab" secondAttribute="width" multiplier="0.5" id="dqL-s6-yQN"/>
                                     <constraint firstItem="Oib-VT-siG" firstAttribute="top" secondItem="rdD-FL-Pab" secondAttribute="bottom" id="enU-4n-MUT"/>
                                     <constraint firstItem="rdD-FL-Pab" firstAttribute="leading" secondItem="U2T-4a-qt5" secondAttribute="leading" id="iKF-Pt-sd6"/>
                                     <constraint firstAttribute="bottom" secondItem="7Q5-sS-jAc" secondAttribute="bottom" id="sYu-WE-qQM"/>
