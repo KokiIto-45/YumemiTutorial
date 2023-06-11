@@ -17,6 +17,14 @@ class ViewController: UIViewController {
             case sunny
             case cloudy
             case rainy
+            
+            func getColor() -> UIColor {
+                switch self {
+                case .sunny: return .red
+                case .cloudy: return .gray
+                case .rainy: return .blue
+                }
+            }
         }
         static let weatherColorArray:[UIColor] = [.red, .gray, .blue]
         let condition: WeatherEnum
@@ -24,8 +32,7 @@ class ViewController: UIViewController {
         
         init(weatherString: String) {
             self.condition = WeatherEnum(rawValue: weatherString)!
-            let index: Int = WeatherEnum.allCases.firstIndex(of: self.condition)!
-            self.imageColor = Weather.weatherColorArray[index]
+            self.imageColor = self.condition.getColor()
         }
     }
 
