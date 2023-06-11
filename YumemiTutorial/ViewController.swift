@@ -13,23 +13,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherImageView: UIImageView!
     
     class Weather {
-        enum WeatherEnum: String {
-            case sunny = "sunny"
-            case cloudy = "cloudy"
-            case rain = "rainy"
+        enum WeatherEnum: String, CaseIterable {
+            case sunny
+            case cloudy
+            case rainy
         }
+        static let weatherColorArray:[UIColor] = [.red, .gray, .blue]
         let condition: WeatherEnum
         let imageColor: UIColor
         
         init(weatherString: String) {
             self.condition = WeatherEnum(rawValue: weatherString)!
-            if self.condition == .sunny {
-                self.imageColor = .red
-            } else if self.condition == .cloudy {
-                self.imageColor = .gray
-            } else {
-                self.imageColor = .blue
-            }
+            let index: Int = WeatherEnum.allCases.firstIndex(of: self.condition)!
+            self.imageColor = Weather.weatherColorArray[index]
         }
     }
 
