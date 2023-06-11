@@ -26,7 +26,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        static let weatherColorArray:[UIColor] = [.red, .gray, .blue]
+        
         let condition: WeatherEnum
         let imageColor: UIColor
         
