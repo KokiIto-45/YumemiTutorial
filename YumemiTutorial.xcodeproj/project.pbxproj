@@ -19,6 +19,8 @@
 		185E163D2A2B6AFF00DBB01C /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 185E163C2A2B6AFF00DBB01C /* YumemiWeather */; };
 		18BB451A2A34660E00E7C410 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB45192A34660E00E7C410 /* NewViewController.swift */; };
 		18BB451C2A34726100E7C410 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB451B2A34726100E7C410 /* DismissSegue.swift */; };
+		18BB451E2A36F18700E7C410 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB451D2A36F18700E7C410 /* Weather.swift */; };
+		18BB45202A36F97700E7C410 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB451F2A36F97700E7C410 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		185E162E2A2B67B100DBB01C /* YumemiTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumemiTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18BB45192A34660E00E7C410 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		18BB451B2A34726100E7C410 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		18BB451D2A36F18700E7C410 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		18BB451F2A36F97700E7C410 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				185E160B2A2B67A900DBB01C /* AppDelegate.swift */,
 				185E160D2A2B67A900DBB01C /* SceneDelegate.swift */,
 				185E160F2A2B67A900DBB01C /* ViewController.swift */,
+				18BB451F2A36F97700E7C410 /* WeatherManager.swift */,
+				18BB451D2A36F18700E7C410 /* Weather.swift */,
 				185E16112A2B67A900DBB01C /* Main.storyboard */,
 				18BB451B2A34726100E7C410 /* DismissSegue.swift */,
 				18BB45192A34660E00E7C410 /* NewViewController.swift */,
@@ -275,7 +281,9 @@
 				185E16102A2B67A900DBB01C /* ViewController.swift in Sources */,
 				18BB451C2A34726100E7C410 /* DismissSegue.swift in Sources */,
 				185E160C2A2B67A900DBB01C /* AppDelegate.swift in Sources */,
+				18BB45202A36F97700E7C410 /* WeatherManager.swift in Sources */,
 				185E160E2A2B67A900DBB01C /* SceneDelegate.swift in Sources */,
+				18BB451E2A36F18700E7C410 /* Weather.swift in Sources */,
 				18BB451A2A34660E00E7C410 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

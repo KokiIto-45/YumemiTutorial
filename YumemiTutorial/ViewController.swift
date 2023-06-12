@@ -10,44 +10,22 @@ import YumemiWeather
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var weatherImageView: UIImageView!
+    let weatherManager = WeatherManager()
     
-    class Weather {
-        enum WeatherEnum: String, CaseIterable {
-            case sunny
-            case cloudy
-            case rainy
-            
-            func getColor() -> UIColor {
-                switch self {
-                case .sunny: return .red
-                case .cloudy: return .gray
-                case .rainy: return .blue
-                }
-            }
-        }
-        
-        let condition: WeatherEnum
-        let imageColor: UIColor
-        
-        init(weatherString: String) {
-            self.condition = WeatherEnum(rawValue: weatherString)!
-            self.imageColor = self.condition.getColor()
-        }
-    }
+    @IBOutlet weak var weatherImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        guard let weather = getWeatherConditionViaAPI() else { return }
-        setWeatherImage(weather: weather)
+        weatherManager.delegate = self
+        weatherManager.requestFetchingWeatherViaApi()
     }
     
-    private func getWeatherConditionViaAPI() -> Weather? {
-        let weatherString = YumemiWeather.fetchWeatherCondition()
-        let weather = Weather(weatherString: weatherString)
-        return weather
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
     }
+    
     
     private func setWeatherImage(weather: Weather) {
         let name = weather.condition.rawValue
@@ -58,11 +36,13 @@ class ViewController: UIViewController {
  
     // Actions
     @IBAction func tapReloadButton(_ sender: Any) {
-        guard let weather = getWeatherConditionViaAPI() else { return }
+        weatherManager.requestFetchingWeatherViaApi()
+    }
+}
+
+extension ViewController: WeatherManagerDelegate {
+    func weatherManager(_ manager: WeatherManager, didUpdatedWeather weather: Weather) {
         setWeatherImage(weather: weather)
     }
-    
-
-
 }
 
