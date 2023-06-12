@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import YumemiWeather
 
 class ViewController: UIViewController {
     
@@ -25,7 +24,9 @@ class ViewController: UIViewController {
         super.viewDidDisappear(true)
         
     }
-    
+    deinit{
+        print("ViewControllerインスタンスが破棄されます")
+    }
     
     private func setWeatherImage(weather: Weather) {
         let name = weather.condition.rawValue
