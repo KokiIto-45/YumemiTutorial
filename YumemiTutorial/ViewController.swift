@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     let weatherManager = WeatherManager()
     let validRegionString = "tokyo"
+    private var alertController: UIAlertController!
     
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var minTemperatureLabel: UILabel!
@@ -19,6 +20,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(foreground(notification:)),
+                                                name: UIApplication.willEnterForegroundNotification,
+                                                object: nil
+        )
+        NotificationCenter.default.addObserver(self,
+                                                selector: #selector(background(notification:)),
+                                                name: UIApplication.didEnterBackgroundNotification,
+                                                object: nil
+        )
         weatherManager.delegate = self
         weatherManager.requestFetchingWeatherViaApi(validRegionString)
     }
@@ -39,8 +50,17 @@ class ViewController: UIViewController {
         minTemperatureLabel.text = String(weather.min_temperature)
         maxTemperatureLabel.text = String(weather.max_temperature)
     }
+    
+    // MARK: Notifications
+    @objc func foreground(notification: Notification) {
+        weatherManager.requestFetchingWeatherViaApi(validRegionString)
+    }
+    
+    @objc func background(notification: Notification) {
+        alertController.dismiss(animated: true)
+    }
  
-    // Actions
+    // MARK: Actions
     @IBAction func tapReloadButton(_ sender: Any) {
         weatherManager.requestFetchingWeatherViaApi(validRegionString)
     }
@@ -51,7 +71,6 @@ extension ViewController: WeatherManagerDelegate {
         setWeatherInfos(weather: weather)
     }
     func weatherManager(_ manager: WeatherManager, didFailWithError error: Error) {
-        var alertController: UIAlertController
         switch(error) {
         case YumemiWeatherError.invalidParameterError :
             alertController = UIAlertController(title: "無効なパラメーターです", message: "", preferredStyle: .alert)
