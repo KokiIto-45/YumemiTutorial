@@ -17,6 +17,8 @@
 		185E162D2A2B67B100DBB01C /* YumemiTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E162C2A2B67B100DBB01C /* YumemiTutorialUITests.swift */; };
 		185E162F2A2B67B100DBB01C /* YumemiTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E162E2A2B67B100DBB01C /* YumemiTutorialUITestsLaunchTests.swift */; };
 		185E163D2A2B6AFF00DBB01C /* YumemiWeather in Frameworks */ = {isa = PBXBuildFile; productRef = 185E163C2A2B6AFF00DBB01C /* YumemiWeather */; };
+		18BB451A2A34660E00E7C410 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB45192A34660E00E7C410 /* NewViewController.swift */; };
+		18BB451C2A34726100E7C410 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB451B2A34726100E7C410 /* DismissSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		185E16282A2B67B100DBB01C /* YumemiTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumemiTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185E162C2A2B67B100DBB01C /* YumemiTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumemiTutorialUITests.swift; sourceTree = "<group>"; };
 		185E162E2A2B67B100DBB01C /* YumemiTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumemiTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18BB45192A34660E00E7C410 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		18BB451B2A34726100E7C410 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				185E160D2A2B67A900DBB01C /* SceneDelegate.swift */,
 				185E160F2A2B67A900DBB01C /* ViewController.swift */,
 				185E16112A2B67A900DBB01C /* Main.storyboard */,
+				18BB451B2A34726100E7C410 /* DismissSegue.swift */,
+				18BB45192A34660E00E7C410 /* NewViewController.swift */,
 				185E16142A2B67B000DBB01C /* Assets.xcassets */,
 				185E16162A2B67B000DBB01C /* LaunchScreen.storyboard */,
 				185E16192A2B67B000DBB01C /* Info.plist */,
@@ -267,8 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				185E16102A2B67A900DBB01C /* ViewController.swift in Sources */,
+				18BB451C2A34726100E7C410 /* DismissSegue.swift in Sources */,
 				185E160C2A2B67A900DBB01C /* AppDelegate.swift in Sources */,
 				185E160E2A2B67A900DBB01C /* SceneDelegate.swift in Sources */,
+				18BB451A2A34660E00E7C410 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
