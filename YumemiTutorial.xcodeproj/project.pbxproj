@@ -60,8 +60,8 @@
 		18BB451B2A34726100E7C410 /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		18BB451D2A36F18700E7C410 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		18BB451F2A36F97700E7C410 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
-		18D2F48B2A3D764000199247 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
-		18D2F48D2A3D7AF700199247 /* JSONUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		18D2F48B2A3D764000199247 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateUtils.swift; path = ../DateUtils.swift; sourceTree = "<group>"; };
+		18D2F48D2A3D7AF700199247 /* JSONUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JSONUtils.swift; path = ../JSONUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				18BB451B2A34726100E7C410 /* DismissSegue.swift */,
-				18D2F48B2A3D764000199247 /* DateUtils.swift */,
 				18D2F48D2A3D7AF700199247 /* JSONUtils.swift */,
+				18D2F48B2A3D764000199247 /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

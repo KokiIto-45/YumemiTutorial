@@ -14,10 +14,11 @@ class ViewController: UIViewController {
     let validRegionString = "tokyo"
     
     @IBOutlet weak var weatherImageView: UIImageView!
-
+    @IBOutlet weak var minTemperatureLabel: UILabel!
+    @IBOutlet weak var maxTemperatureLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         weatherManager.delegate = self
         weatherManager.requestFetchingWeatherViaApi(validRegionString)
     }
@@ -30,11 +31,13 @@ class ViewController: UIViewController {
         print("ViewControllerインスタンスが破棄されます")
     }
     
-    private func setWeatherImage(weather: Weather) {
+    private func setWeatherInfos(weather: Weather) {
         let name = weather.condition.rawValue
         let color = weather.imageColor
         weatherImageView.image = UIImage(named: name)?.withRenderingMode(.alwaysTemplate)
         weatherImageView.tintColor = color
+        minTemperatureLabel.text = String(weather.min_temperature)
+        maxTemperatureLabel.text = String(weather.max_temperature)
     }
  
     // Actions
@@ -45,7 +48,7 @@ class ViewController: UIViewController {
 
 extension ViewController: WeatherManagerDelegate {
     func weatherManager(_ manager: WeatherManager, didUpdatedWeather weather: Weather) {
-        setWeatherImage(weather: weather)
+        setWeatherInfos(weather: weather)
     }
     func weatherManager(_ manager: WeatherManager, didFailWithError error: Error) {
         var alertController: UIAlertController
