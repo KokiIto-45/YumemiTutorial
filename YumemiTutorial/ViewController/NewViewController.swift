@@ -13,6 +13,7 @@ class  NewViewController: UIViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.performSegue(withIdentifier: "openWeatherViewSegue", sender: self)
     }
 }
