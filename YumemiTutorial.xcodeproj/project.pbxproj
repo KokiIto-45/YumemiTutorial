@@ -109,14 +109,13 @@
 		185E160A2A2B67A900DBB01C /* YumemiTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				18B1AA912A624A0D007280BE /* ViewController */,
+				18B1AA932A624BA0007280BE /* Models */,
+				18B1AA922A624B5D007280BE /* Utils */,
 				185E160B2A2B67A900DBB01C /* AppDelegate.swift */,
 				185E160D2A2B67A900DBB01C /* SceneDelegate.swift */,
-				185E160F2A2B67A900DBB01C /* ViewController.swift */,
 				18BB451F2A36F97700E7C410 /* WeatherManager.swift */,
-				18BB451D2A36F18700E7C410 /* Weather.swift */,
 				185E16112A2B67A900DBB01C /* Main.storyboard */,
-				18BB451B2A34726100E7C410 /* DismissSegue.swift */,
-				18BB45192A34660E00E7C410 /* NewViewController.swift */,
 				185E16142A2B67B000DBB01C /* Assets.xcassets */,
 				185E16162A2B67B000DBB01C /* LaunchScreen.storyboard */,
 				185E16192A2B67B000DBB01C /* Info.plist */,
@@ -139,6 +138,31 @@
 				185E162E2A2B67B100DBB01C /* YumemiTutorialUITestsLaunchTests.swift */,
 			);
 			path = YumemiTutorialUITests;
+			sourceTree = "<group>";
+		};
+		18B1AA912A624A0D007280BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185E160F2A2B67A900DBB01C /* ViewController.swift */,
+				18BB45192A34660E00E7C410 /* NewViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		18B1AA922A624B5D007280BE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				18BB451B2A34726100E7C410 /* DismissSegue.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18B1AA932A624BA0007280BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18BB451D2A36F18700E7C410 /* Weather.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
